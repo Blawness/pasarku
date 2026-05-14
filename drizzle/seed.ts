@@ -1,3 +1,6 @@
+import { config } from "dotenv";
+config({ path: ".env.local" });
+
 import { db } from "@/lib/db";
 import * as schema from "@/drizzle/schema";
 import bcrypt from "bcryptjs";

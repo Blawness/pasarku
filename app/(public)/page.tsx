@@ -1,9 +1,15 @@
 import { eq, isNotNull, and } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { products, productImages, categories, merchants } from "@/drizzle/schema";
+import {
+  products,
+  productImages,
+  categories,
+  merchants,
+} from "@/drizzle/schema";
 import { CategoryNav } from "@/components/product/CategoryNav";
 import { ProductGrid } from "@/components/product/ProductGrid";
 import { SearchBar } from "@/components/product/SearchBar";
+import { HeroBanner } from "@/components/layout/HeroBanner";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { Search } from "lucide-react";
 
@@ -14,36 +20,25 @@ interface HomePageProps {
 export default async function HomePage({ searchParams }: HomePageProps) {
   const { q } = await searchParams;
 
-  const [allCategories, allProducts] = await Promise.all([
-    db.select().from(categories).orderBy(categories.name),
-    db
-      .select({
-        id: products.id,
-        name: products.name,
-        slug: products.slug,
-        price: products.price,
-        stock: products.stock,
-        imageUrl: productImages.url,
-        storeName: merchants.storeName,
-        merchantId: merchants.id,
-      })
-      .from(products)
-      .innerJoin(merchants, eq(products.merchantId, merchants.id))
-      .leftJoin(
-        productImages,
-        and(
-          eq(products.id, productImages.productId),
-          eq(productImages.order, 0)
-        )
-      )
-      .where(
-        and(
-          eq(products.isActive, true),
-          isNotNull(productImages.url)
-        )
-      )
-      .limit(20),
-  ]);
+  const allProducts = await db
+    .select({
+      id: products.id,
+      name: products.name,
+      slug: products.slug,
+      price: products.price,
+      stock: products.stock,
+      imageUrl: productImages.url,
+      storeName: merchants.storeName,
+      merchantId: merchants.id,
+    })
+    .from(products)
+    .innerJoin(merchants, eq(products.merchantId, merchants.id))
+    .leftJoin(
+      productImages,
+      and(eq(products.id, productImages.productId), eq(productImages.order, 0))
+    )
+    .where(and(eq(products.isActive, true), isNotNull(productImages.url)))
+    .limit(20);
 
   const productList = allProducts.map((p) => ({
     id: p.id,
@@ -63,16 +58,30 @@ export default async function HomePage({ searchParams }: HomePageProps) {
     : productList;
 
   return (
-    <div className="flex flex-col gap-6 py-6 px-4 sm:px-6 lg:px-8">
-      <SearchBar className="w-full max-w-md mx-auto" />
+    <div className="flex flex-col">
+      {/* Mobile search header */}
+      <div className="bg-gradient-to-b from-green-50 to-white px-4 pt-3 pb-3 sm:hidden">
+        <SearchBar
+          className="w-full"
+          placeholder="Cari beragam kebutuhan harian"
+        />
+      </div>
 
-      <section className="overflow-x-auto pb-1">
+      {/* Hero banner */}
+      <HeroBanner />
+
+      {/* Categories */}
+      <section className="pt-4 pb-2">
+        <div className="mb-2.5 flex items-center justify-between px-4">
+          <h2 className="text-sm font-bold text-gray-800">Kategori</h2>
+        </div>
         <CategoryNav />
       </section>
 
-      <section>
-        <h2 className="text-xl font-semibold mb-4">
-          {q ? `Hasil pencarian "${q}"` : "Produk Terbaru"}
+      {/* Products */}
+      <section className="px-4 pt-2 pb-6">
+        <h2 className="mb-3 text-sm font-bold text-gray-800">
+          {q ? `Hasil pencarian "${q}"` : "Produk Pilihan"}
         </h2>
 
         {q && filteredProducts.length === 0 ? (

@@ -17,7 +17,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     verificationTokensTable: schema.verificationTokens as any,
   }),
-  session: { strategy: "database" },
+  session: { strategy: "jwt" },
   providers: [
     Credentials({
       credentials: {
@@ -57,23 +57,21 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     signIn: "/login",
   },
   callbacks: {
-    async session({ session, user }) {
-      const [dbUser] = await db
-        .select()
-        .from(schema.users)
-        .where(eq(schema.users.id, user.id))
-        .limit(1);
-
-      if (dbUser && session.user) {
-        session.user.id = dbUser.id;
-        (session.user as unknown as Record<string, unknown>).role = dbUser.role;
+    async session({ session, token }) {
+      if (token && session.user) {
+        session.user.id = token.id as string;
+        (session.user as unknown as Record<string, unknown>).role =
+          token.role;
       }
 
       return session;
     },
     async jwt({ token, user }) {
       if (user) {
-        token.role = (user as Record<string, unknown>).role;
+        token.id = user.id;
+        (token as Record<string, unknown>).role = (
+          user as Record<string, unknown>
+        ).role;
       }
       return token;
     },

@@ -1,0 +1,407 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - generic [ref=e8]:
+      - generic [ref=e10]:
+        - img "geo alt fill" [ref=e11]
+        - text: JABODETABEK. Masuk untuk ubah lokasi.
+      - generic [ref=e15]:
+        - button "Layanan Pelanggan" [ref=e17] [cursor=pointer]
+        - button "Jelajahi Alfagift" [ref=e19] [cursor=pointer]
+        - button "phone Download Alfagift App" [ref=e21] [cursor=pointer]:
+          - img "phone" [ref=e22]
+          - text: Download Alfagift App
+    - generic [ref=e28]:
+      - generic [ref=e29]:
+        - link "alfagift.id" [ref=e30] [cursor=pointer]:
+          - /url: https://alfagift.id
+          - img "alfagift.id" [ref=e31]
+        - button "grid Kategori" [ref=e33] [cursor=pointer]:
+          - img "grid" [ref=e34]
+          - text: Kategori
+      - group [ref=e37]:
+        - textbox "Temukan produk favoritmu disini" [ref=e38]
+        - button "search" [ref=e40] [cursor=pointer]:
+          - img "search" [ref=e41]
+      - generic [ref=e45]:
+        - generic [ref=e46]:
+          - link "Brand" [ref=e47] [cursor=pointer]:
+            - /url: /brands
+          - link "Promo" [ref=e48] [cursor=pointer]:
+            - /url: /promo
+        - link "Basket" [ref=e49] [cursor=pointer]:
+          - /url: /login
+          - button "Basket" [ref=e50]:
+            - img "Basket" [ref=e51]
+        - generic [ref=e52]:
+          - link "Daftar" [ref=e53] [cursor=pointer]:
+            - /url: /register
+          - link "Masuk" [ref=e54] [cursor=pointer]:
+            - /url: /login
+  - generic [ref=e55]:
+    - generic [ref=e56]:
+      - generic [ref=e60]:
+        - generic [ref=e61]:
+          - button "Previous" [ref=e62] [cursor=pointer]
+          - generic [ref=e64]:
+            - img [ref=e69]
+            - img [ref=e74]
+            - img "Banner" [ref=e79]
+            - img "Banner" [ref=e84]
+            - img "Banner" [ref=e89]
+            - img [ref=e94]
+            - img [ref=e99]
+            - img [ref=e104]
+            - img [ref=e109]
+            - img [ref=e114]
+            - img [ref=e119]
+            - img [ref=e124]
+            - img [ref=e129]
+            - img [ref=e134]
+            - img [ref=e139]
+            - img [ref=e144]
+            - img [ref=e149]
+            - img [ref=e154]
+            - img [ref=e159]
+            - img [ref=e164]
+            - img [ref=e169]
+            - img [ref=e174]
+            - img [ref=e179]
+          - button "Next" [ref=e180] [cursor=pointer]
+          - list [ref=e181]:
+            - listitem [ref=e182] [cursor=pointer]:
+              - button "• 1" [ref=e183]
+            - listitem [ref=e184] [cursor=pointer]:
+              - button "• 2" [ref=e185]
+            - listitem [ref=e186] [cursor=pointer]:
+              - button "• 3" [ref=e187]
+            - listitem [ref=e188] [cursor=pointer]:
+              - button "• 4" [ref=e189]
+            - listitem [ref=e190] [cursor=pointer]:
+              - button "• 5" [ref=e191]
+            - listitem [ref=e192] [cursor=pointer]:
+              - button "• 6" [ref=e193]
+            - listitem [ref=e194] [cursor=pointer]:
+              - button "• 7" [ref=e195]
+            - listitem [ref=e196] [cursor=pointer]:
+              - button "• 8" [ref=e197]
+            - listitem [ref=e198] [cursor=pointer]:
+              - button "• 9" [ref=e199]
+            - listitem [ref=e200] [cursor=pointer]:
+              - button "• 10" [ref=e201]
+        - link "Lihat Semua chevron right":
+          - /url: /promo
+          - button "Lihat Semua chevron right" [ref=e202] [cursor=pointer]:
+            - text: Lihat Semua
+            - img "chevron right" [ref=e203]
+      - text: • • • • • • • • • •
+      - generic [ref=e208]:
+        - img "Download Alfagift" [ref=e210]
+        - paragraph [ref=e211]: Produk Rekomendasi
+        - generic [ref=e212]:
+          - generic [ref=e214]:
+            - link "Fruit Tea Minuman Teh Freeze 350 ml Fruit Tea Minuman Teh Freeze 350 ml Rp 4.500 Warehouse Produk Online Warehouse Pengiriman Instan" [ref=e215] [cursor=pointer]:
+              - /url: /p/fruit-tea-minuman-teh-freeze-350-ml-424722
+              - img "Fruit Tea Minuman Teh Freeze 350 ml" [ref=e217]
+              - paragraph [ref=e219]: Fruit Tea Minuman Teh Freeze 350 ml
+              - paragraph [ref=e222]: Rp 4.500
+              - generic [ref=e223]:
+                - generic [ref=e224]:
+                  - img "Warehouse" [ref=e225]
+                  - generic [ref=e226]: Produk Online
+                - generic [ref=e227]:
+                  - img "Warehouse" [ref=e228]
+                  - generic [ref=e229]: Pengiriman Instan
+            - button "Beli" [ref=e232] [cursor=pointer]
+          - generic [ref=e234]:
+            - link "ABC Minuman Sari Kacang Hijau 250 ml ABC Minuman Sari Kacang Hijau 250 ml Rp 5.800 Warehouse Produk Online Warehouse Pengiriman Instan" [ref=e235] [cursor=pointer]:
+              - /url: /p/abc-minuman-sari-kacang-hijau-250-ml-14625
+              - img "ABC Minuman Sari Kacang Hijau 250 ml" [ref=e237]
+              - paragraph [ref=e239]: ABC Minuman Sari Kacang Hijau 250 ml
+              - paragraph [ref=e242]: Rp 5.800
+              - generic [ref=e243]:
+                - generic [ref=e244]:
+                  - img "Warehouse" [ref=e245]
+                  - generic [ref=e246]: Produk Online
+                - generic [ref=e247]:
+                  - img "Warehouse" [ref=e248]
+                  - generic [ref=e249]: Pengiriman Instan
+            - button "Beli" [ref=e252] [cursor=pointer]
+          - generic [ref=e254]:
+            - link "Happy Tos Keripik Tortilla Original 140 g Happy Tos Keripik Tortilla Original 140 g Rp 11.600 Warehouse Produk Online Warehouse Pengiriman Instan" [ref=e255] [cursor=pointer]:
+              - /url: /p/happy-tos-keripik-tortilla-original-140-g-24327
+              - img "Happy Tos Keripik Tortilla Original 140 g" [ref=e257]
+              - paragraph [ref=e259]: Happy Tos Keripik Tortilla Original 140 g
+              - paragraph [ref=e262]: Rp 11.600
+              - generic [ref=e263]:
+                - generic [ref=e264]:
+                  - img "Warehouse" [ref=e265]
+                  - generic [ref=e266]: Produk Online
+                - generic [ref=e267]:
+                  - img "Warehouse" [ref=e268]
+                  - generic [ref=e269]: Pengiriman Instan
+            - button "Beli" [ref=e272] [cursor=pointer]
+          - generic [ref=e274]:
+            - link "Happy Tos Keripik Tortilla Hijau 140 g Happy Tos Keripik Tortilla Hijau 140 g Rp 13.700 Warehouse Produk Online Warehouse Pengiriman Instan" [ref=e275] [cursor=pointer]:
+              - /url: /p/happy-tos-keripik-tortilla-hijau-140-g-13805
+              - img "Happy Tos Keripik Tortilla Hijau 140 g" [ref=e277]
+              - paragraph [ref=e279]: Happy Tos Keripik Tortilla Hijau 140 g
+              - paragraph [ref=e282]: Rp 13.700
+              - generic [ref=e283]:
+                - generic [ref=e284]:
+                  - img "Warehouse" [ref=e285]
+                  - generic [ref=e286]: Produk Online
+                - generic [ref=e287]:
+                  - img "Warehouse" [ref=e288]
+                  - generic [ref=e289]: Pengiriman Instan
+            - button "Beli" [ref=e292] [cursor=pointer]
+          - generic [ref=e294]:
+            - link "Fruit Tea Minuman Teh Blackcurrant 350 ml Fruit Tea Minuman Teh Blackcurrant 350 ml Rp 4.500 Warehouse Produk Online Warehouse Pengiriman Instan" [ref=e295] [cursor=pointer]:
+              - /url: /p/fruit-tea-minuman-teh-blackcurrant-350-ml-178873
+              - img "Fruit Tea Minuman Teh Blackcurrant 350 ml" [ref=e297]
+              - paragraph [ref=e299]: Fruit Tea Minuman Teh Blackcurrant 350 ml
+              - paragraph [ref=e302]: Rp 4.500
+              - generic [ref=e303]:
+                - generic [ref=e304]:
+                  - img "Warehouse" [ref=e305]
+                  - generic [ref=e306]: Produk Online
+                - generic [ref=e307]:
+                  - img "Warehouse" [ref=e308]
+                  - generic [ref=e309]: Pengiriman Instan
+            - button "Beli" [ref=e312] [cursor=pointer]
+          - generic [ref=e314]:
+            - link "Pocari Sweat Minuman Isotonik Botol 500 ml Pocari Sweat Minuman Isotonik Botol 500 ml Rp 8.400 Warehouse Produk Online Warehouse Pengiriman Instan" [ref=e315] [cursor=pointer]:
+              - /url: /p/pocari-sweat-minuman-isotonik-botol-500-ml-14987
+              - img "Pocari Sweat Minuman Isotonik Botol 500 ml" [ref=e317]
+              - paragraph [ref=e319]: Pocari Sweat Minuman Isotonik Botol 500 ml
+              - paragraph [ref=e322]: Rp 8.400
+              - generic [ref=e323]:
+                - generic [ref=e324]:
+                  - img "Warehouse" [ref=e325]
+                  - generic [ref=e326]: Produk Online
+                - generic [ref=e327]:
+                  - img "Warehouse" [ref=e328]
+                  - generic [ref=e329]: Pengiriman Instan
+            - button "Beli" [ref=e332] [cursor=pointer]
+        - button "Lihat Selengkapnya chevron down" [ref=e335] [cursor=pointer]:
+          - text: Lihat Selengkapnya
+          - img "chevron down" [ref=e336]
+        - separator [ref=e339]
+        - paragraph [ref=e340]: Produk Terbaru
+        - generic [ref=e341]:
+          - generic [ref=e343]:
+            - link "Wall's Magnum Es Krim Matcha Crumble 80 ml Wall's Magnum Es Krim Matcha Crumble 80 ml Rp 20.800 Warehouse Produk Online Warehouse Pengiriman Instan" [ref=e344] [cursor=pointer]:
+              - /url: /p/walls-magnum-es-krim-matcha-crumble-80-ml-796368
+              - img "Wall's Magnum Es Krim Matcha Crumble 80 ml" [ref=e346]
+              - paragraph [ref=e348]: Wall's Magnum Es Krim Matcha Crumble 80 ml
+              - paragraph [ref=e351]: Rp 20.800
+              - generic [ref=e352]:
+                - generic [ref=e353]:
+                  - img "Warehouse" [ref=e354]
+                  - generic [ref=e355]: Produk Online
+                - generic [ref=e356]:
+                  - img "Warehouse" [ref=e357]
+                  - generic [ref=e358]: Pengiriman Instan
+            - button "Beli" [ref=e361] [cursor=pointer]
+          - generic [ref=e363]:
+            - link "Blue Band Santan Kelapa 65 ml Blue Band Santan Kelapa 65 ml Rp 5.400 Warehouse Produk Online Warehouse Pengiriman Instan" [ref=e364] [cursor=pointer]:
+              - /url: /p/blue-band-santan-kelapa-65-ml-841010
+              - img "Blue Band Santan Kelapa 65 ml" [ref=e366]
+              - paragraph [ref=e368]: Blue Band Santan Kelapa 65 ml
+              - paragraph [ref=e371]: Rp 5.400
+              - generic [ref=e372]:
+                - generic [ref=e373]:
+                  - img "Warehouse" [ref=e374]
+                  - generic [ref=e375]: Produk Online
+                - generic [ref=e376]:
+                  - img "Warehouse" [ref=e377]
+                  - generic [ref=e378]: Pengiriman Instan
+            - button "Beli" [ref=e381] [cursor=pointer]
+          - generic [ref=e383]:
+            - link "NCO by Hanasui Extrait de Parfum Wanita Seraphine 40 ml NCO by Hanasui Extrait de Parfum Wanita Seraphine 40 ml Rp 59.900 Warehouse Produk Online Warehouse Pengiriman Instan" [ref=e384] [cursor=pointer]:
+              - /url: /p/nco-by-hanasui-extrait-de-parfum-wanita-seraphine-40-ml-840989
+              - img "NCO by Hanasui Extrait de Parfum Wanita Seraphine 40 ml" [ref=e386]
+              - paragraph [ref=e388]: NCO by Hanasui Extrait de Parfum Wanita Seraphine 40 ml
+              - paragraph [ref=e391]: Rp 59.900
+              - generic [ref=e392]:
+                - generic [ref=e393]:
+                  - img "Warehouse" [ref=e394]
+                  - generic [ref=e395]: Produk Online
+                - generic [ref=e396]:
+                  - img "Warehouse" [ref=e397]
+                  - generic [ref=e398]: Pengiriman Instan
+            - button "Beli" [ref=e401] [cursor=pointer]
+          - generic [ref=e403]:
+            - link "Facetology Triple Care Sunscreen Wajah SPF 30 30 ml Facetology Triple Care Sunscreen Wajah SPF 30 30 ml Rp 44.000 Warehouse Produk Online Warehouse Pengiriman Instan" [ref=e404] [cursor=pointer]:
+              - /url: /p/facetology-triple-care-sunscreen-wajah-spf-30-30-ml-840991
+              - img "Facetology Triple Care Sunscreen Wajah SPF 30 30 ml" [ref=e406]
+              - paragraph [ref=e408]: Facetology Triple Care Sunscreen Wajah SPF 30 30 ml
+              - paragraph [ref=e411]: Rp 44.000
+              - generic [ref=e412]:
+                - generic [ref=e413]:
+                  - img "Warehouse" [ref=e414]
+                  - generic [ref=e415]: Produk Online
+                - generic [ref=e416]:
+                  - img "Warehouse" [ref=e417]
+                  - generic [ref=e418]: Pengiriman Instan
+            - button "Beli" [ref=e421] [cursor=pointer]
+          - generic [ref=e423]:
+            - link "Apolo Huggiez Gelang Mainan Anak Bentuk Hewan Assorted Apolo Huggiez Gelang Mainan Anak Bentuk Hewan Assorted Rp 49.900 Warehouse Produk Online Warehouse Pengiriman Instan" [ref=e424] [cursor=pointer]:
+              - /url: /p/apolo-huggiez-gelang-mainan-anak-bentuk-hewan-assorted-839878
+              - img "Apolo Huggiez Gelang Mainan Anak Bentuk Hewan Assorted" [ref=e426]
+              - paragraph [ref=e428]: Apolo Huggiez Gelang Mainan Anak Bentuk Hewan Assorted
+              - paragraph [ref=e431]: Rp 49.900
+              - generic [ref=e432]:
+                - generic [ref=e433]:
+                  - img "Warehouse" [ref=e434]
+                  - generic [ref=e435]: Produk Online
+                - generic [ref=e436]:
+                  - img "Warehouse" [ref=e437]
+                  - generic [ref=e438]: Pengiriman Instan
+            - button "Beli" [ref=e441] [cursor=pointer]
+          - generic [ref=e443]:
+            - 'link "2% Chitato Keripik Kentang Rasa Rendang Sapi 62 g Beli 2 : Rp 9.250/pcs Chitato Keripik Kentang Rasa Rendang Sapi 62 g Rp 12.200 Rp 12.000 Warehouse Produk Online Warehouse Pengiriman Instan" [ref=e444] [cursor=pointer]':
+              - /url: /p/chitato-keripik-kentang-rasa-rendang-sapi-62-g-839885
+              - generic [ref=e445]: 2%
+              - generic [ref=e446]:
+                - img "Chitato Keripik Kentang Rasa Rendang Sapi 62 g" [ref=e447]
+                - generic [ref=e449]: "Beli 2 : Rp 9.250/pcs"
+              - paragraph [ref=e450]: Chitato Keripik Kentang Rasa Rendang Sapi 62 g
+              - generic [ref=e451]:
+                - deletion [ref=e453]: Rp 12.200
+                - paragraph [ref=e454]: Rp 12.000
+              - generic [ref=e455]:
+                - generic [ref=e456]:
+                  - img "Warehouse" [ref=e457]
+                  - generic [ref=e458]: Produk Online
+                - generic [ref=e459]:
+                  - img "Warehouse" [ref=e460]
+                  - generic [ref=e461]: Pengiriman Instan
+            - button "Beli" [ref=e464] [cursor=pointer]
+        - button "Lihat Selengkapnya chevron down" [ref=e467] [cursor=pointer]:
+          - text: Lihat Selengkapnya
+          - img "chevron down" [ref=e468]
+      - generic [ref=e472]:
+        - generic [ref=e475]:
+          - paragraph [ref=e476]: Yuk, belanja di Alfagift dan Dapatkan Keuntungannya!
+          - generic [ref=e477]:
+            - generic [ref=e478]:
+              - img "Gratis Ongkit Tanpa Syarat" [ref=e479]
+              - paragraph [ref=e480]: Gratis Ongkir Tanpa Syarat
+              - paragraph [ref=e481]: Belanja berapa pun, gratis biaya pengiriman tanpa batas maksimal
+            - generic [ref=e482]:
+              - img "Sameday Delivery" [ref=e483]
+              - paragraph [ref=e484]: Sameday Delivery
+              - paragraph [ref=e485]: Pesanan diantar lebih cepat karena diantar dari toko Alfamart terdekat*
+            - generic [ref=e486]:
+              - img "Poin Terintegrasi" [ref=e487]
+              - paragraph [ref=e488]: Poin Terintegrasi
+              - paragraph [ref=e489]: Dapatkan poin untuk setiap pembelanjaan di Alfagift atau toko Alfamart
+            - generic [ref=e490]:
+              - img "Produk Lebih Lengkap" [ref=e491]
+              - paragraph [ref=e492]: Produk Lebih Lengkap
+              - paragraph [ref=e493]: Lebih lengkap dengan produk premium, kemasan besar, dan kebutuhan lainnya
+        - generic [ref=e494]: "*untuk seluruh produk bertanda stok dari toko"
+        - img "Stok Dari Toko" [ref=e495]
+    - generic [ref=e499]:
+      - paragraph [ref=e500]: Alfagift, Toko Belanja Online Grocery Terlengkap dari Alfamart
+      - paragraph [ref=e501]: Alfamart adalah salah satu perusahaan ritel minimarket terkemuka yang telah hadir memberikan kemudahan dan kenyamanan berbelanja selama puluhan tahun untuk masyarakat Indonesia. Berbekal pengalaman tersebut dan kemauan untuk terus berkembang memberikan yang terbaik bagi pelanggan setianya, lahirlah Alfagift, toko online yang jual puluhan ribu pilihan produk kebutuhan sehari-hari dengan kategori yang beragam. Misalnya, makanan dan minuman, bahan masakan, perlengkapan bayi dan anak, perlengkapan rumah tangga, produk kecantikan dan kesehatan, dan masih banyak lagi. Toko Alfamart online Alfagift akan menjadi tempat belanja online grocery yang terlengkap dan terpercaya di Indonesia.
+      - paragraph [ref=e502]: Cara Belanja di Alfagift
+      - paragraph [ref=e503]: Menyenangkan rasanya ketika bisa memenuhi kebutuhan sehari-hari hanya dengan menggerakkan jari di layar smartphone atau laptop dari rumah. Tidak perlu lagi menghabiskan waktu lama dan menghadapi kemacetan di jalan untuk membeli produk belanja bulanan karena Alfagift hadir untuk membuat belanja online jadi dekat. Sembari bersantai dan menikmati momen bersama keluarga, belanja kebutuhan sehari-hari dapat dilakukan dengan beberapa klik melalui desktop atau pun aplikasi Alfagift user friendly yang dapat dengan mudah diunduh atau didownload di Google Playstore dan Apple App Store. Semua dapat dilakukan dari hampir seluruh daerah di penjuru Indonesia karena toko Alfamart telah hadir di ribuan titik nusantara. Menjadikannya payment point, pickup point, hingga warehouse yang melayani pengiriman sehingga pesanan dapat sampai jauh lebih cepat. Didukung layanan pengiriman cepat same day dan gratis ongkir.
+      - paragraph [ref=e504]: Beragam Promo Alfagift Super Hemat
+      - paragraph [ref=e505]: Ada begitu banyak program promo dan diskon produk menarik yang dapat dinikmati setiap hari di toko online terpercaya Alfagift. Membantu Anda untuk lebih hemat dan cermat dalam mengatur pengeluaran. Seluruh promo yang bisa dinikmati di toko, seperti JSM Alfamart, promo dwi mingguan (PDM), dan voucher Alfamart yang hemat juga dapat dinikmati di Alfagift dengan keuntungan yang sama. Selain itu, juga ada promo member, official store, promo payday, promo bank, ramadhan, liburan, lebaran, natal, tahun baru, harga spesial, kupon belanja, dan cashback yang bisa dinikmati oleh seluruh pelanggan.
+      - paragraph [ref=e506]: Kemudahan Bertransaksi di Online Shop Alfagift
+      - paragraph [ref=e507]: Bersama dengan semua itu, Alfagift juga menyediakan kemudahan bertransaksi melalui kartu kredit (Visa, Master Card, dan JCB), transfer via ATM, internet, dan online banking, GoPay, ShopeePay, dan Virgo. Lengkap dengan fasilitas menarik lainnya, seperti bayar di tempat atau cash on delivery (COD) dan pay at store (PAS), gratis ongkir, ambil di toko, hingga layanan pesan antar Alfamart yang memungkinkan pesanan diterima di hari yang sama. Informasi lengkap lainnya bisa diakses dengan mudah melalui blog Alfamart yang juga memuat artikel / tips dengan topik dan tema menarik setiap hari.
+    - contentinfo [ref=e509]:
+      - generic [ref=e511]:
+        - generic [ref=e512]:
+          - paragraph [ref=e513]: Layanan Pelanggan
+          - list [ref=e514]:
+            - listitem [ref=e515]:
+              - link "Pertanyaan Umum" [ref=e516] [cursor=pointer]:
+                - /url: /faq
+            - listitem [ref=e517]:
+              - link "Cara Belanja" [ref=e518] [cursor=pointer]:
+                - /url: /howtobuy
+            - listitem [ref=e519]:
+              - link "A-Poin" [ref=e520] [cursor=pointer]:
+                - /url: /apoint
+            - listitem [ref=e521]:
+              - link "Gratis Ongkir" [ref=e522] [cursor=pointer]:
+                - /url: /shipping-cost
+            - listitem [ref=e523]:
+              - link "Beli Voucher" [ref=e524] [cursor=pointer]:
+                - /url: /beli-voucher
+        - generic [ref=e525]:
+          - paragraph [ref=e526]: Jelajahi Alfagift
+          - list [ref=e527]:
+            - listitem [ref=e528]:
+              - link "Tentang Alfagift" [ref=e529] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e530]:
+              - link "Syarat & Ketentuan" [ref=e531] [cursor=pointer]:
+                - /url: /terms
+            - listitem [ref=e532]:
+              - link "Kebijakan Privasi" [ref=e533] [cursor=pointer]:
+                - /url: /privacy
+            - listitem [ref=e534]:
+              - link "Karir" [ref=e535] [cursor=pointer]:
+                - /url: https://gli.id/career
+            - listitem [ref=e536]:
+              - link "Blog" [ref=e537] [cursor=pointer]:
+                - /url: https://blog.alfagift.id
+        - generic [ref=e538]:
+          - paragraph [ref=e539]: Metode Pembayaran
+          - list [ref=e540]:
+            - listitem [ref=e541]:
+              - img "payment cod"
+            - listitem [ref=e542]:
+              - img "payment bca"
+            - listitem [ref=e543]:
+              - img "payment mandiri"
+            - listitem [ref=e544]:
+              - img "payment atm bersama"
+          - paragraph [ref=e545]: Layanan Pengiriman
+          - list [ref=e546]:
+            - listitem [ref=e547]:
+              - img "delivery"
+        - generic [ref=e548]:
+          - paragraph [ref=e549]: Ikuti Kami
+          - list [ref=e550]:
+            - listitem [ref=e551]:
+              - link "social-media" [ref=e552] [cursor=pointer]:
+                - /url: https://web.facebook.com/Alfagift.idn
+                - img "social-media"
+            - listitem [ref=e553]:
+              - link "twitter" [ref=e554] [cursor=pointer]:
+                - /url: https://twitter.com/alfagift_idn
+                - img "twitter"
+            - listitem [ref=e555]:
+              - link "instagram" [ref=e556] [cursor=pointer]:
+                - /url: https://www.instagram.com/alfagift_idn/
+                - img "instagram"
+          - paragraph [ref=e557]: Hubungi Kami
+          - list [ref=e558]:
+            - listitem [ref=e559]:
+              - generic [ref=e560]:
+                - img "inbox"
+                - text: alfacare@sat.co.id
+            - listitem [ref=e561]:
+              - generic [ref=e562]:
+                - img "customer-service"
+                - text: 1500-959
+        - generic [ref=e563]:
+          - generic [ref=e564]:
+            - paragraph [ref=e565]: Layanan Pengaduan Konsumen
+            - generic [ref=e566]: PT. Sumber Alfaria Trijaya, Tbk
+            - generic [ref=e567]: "Email : alfacare@sat.co.id"
+            - generic [ref=e568]: "Call Center: 1500-959"
+            - generic [ref=e569]: Direktorat Jenderal Perlindungan Konsumen dan Tertib Niaga Kementerian Perdagangan Republik Indonesia
+            - generic [ref=e570]: "Whatsapp Ditjen PKTN: 0853 1111 1010"
+          - generic [ref=e571]:
+            - link "download-play-store" [ref=e573] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.alfamart.alfagift
+              - img "download-play-store" [ref=e574]
+            - link "download-app-store" [ref=e576] [cursor=pointer]:
+              - /url: https://apps.apple.com/id/app/id1013717463
+              - img "download-app-store" [ref=e577]
+          - paragraph [ref=e578]: © 2022, PT. Sumber Alfaria Trijaya
