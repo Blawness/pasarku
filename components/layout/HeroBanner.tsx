@@ -1,35 +1,36 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { ChevronRight } from "lucide-react";
 
 const banners = [
   {
     id: 1,
-    gradient: "from-emerald-700 via-green-600 to-teal-500",
-    title: "Belanja Lebih Hemat",
-    subtitle: "Grocery segar diantar dalam 10–30 menit",
-    badge: "Gratis Ongkir",
-    badgeClass: "bg-yellow-400 text-yellow-900",
-    emoji: "🥦",
+    image: "https://placehold.co/1200x260/dc2626/ffffff?text=CASHBACK+Rp+10.000",
+    alt: "Promo Cashback Rp 10.000",
   },
   {
     id: 2,
-    gradient: "from-orange-500 via-amber-500 to-yellow-400",
-    title: "Promo Akhir Pekan",
-    subtitle: "Diskon s/d 40% untuk produk pilihan",
-    badge: "Terbatas",
-    badgeClass: "bg-white/25 text-white",
-    emoji: "🍎",
+    image: "https://placehold.co/1200x260/ea580c/ffffff?text=PROMO+JSM",
+    alt: "Promo JSM",
   },
   {
     id: 3,
-    gradient: "from-teal-600 via-emerald-500 to-green-400",
-    title: "Langsung dari Petani",
-    subtitle: "Produk segar dipanen hari ini",
-    badge: "100% Segar",
-    badgeClass: "bg-white/25 text-white",
-    emoji: "🌽",
+    image: "https://placehold.co/1200x260/dc2626/ffffff?text=GRATIS+ONGKIR",
+    alt: "Gratis Ongkir",
+  },
+  {
+    id: 4,
+    image: "https://placehold.co/1200x260/ea580c/ffffff?text=DISKON+40%25",
+    alt: "Diskon 40%",
+  },
+  {
+    id: 5,
+    image: "https://placehold.co/1200x260/dc2626/ffffff?text=PROMO+HEMAT",
+    alt: "Promo Hemat",
   },
 ];
 
@@ -61,70 +62,91 @@ export function HeroBanner() {
     setStartX(null);
   };
 
+  const goTo = (index: number) => setCurrent(index);
+  const goPrev = () =>
+    setCurrent((c) => (c - 1 + banners.length) % banners.length);
+  const goNext = () => setCurrent((c) => (c + 1) % banners.length);
+
   return (
-    <div
-      className="relative overflow-hidden select-none"
-      onPointerDown={handlePointerDown}
-      onPointerUp={handlePointerUp}
-    >
-      {/* Slides */}
-      <div
-        className="flex transition-transform duration-500 ease-out"
-        style={{ transform: `translateX(-${current * 100}%)` }}
-      >
-        {banners.map((banner) => (
-          <div
-            key={banner.id}
-            className={cn(
-              "relative flex w-full shrink-0 flex-col justify-center overflow-hidden bg-gradient-to-r px-6 py-7",
-              banner.gradient
-            )}
-            style={{ minWidth: "100%" }}
+    <section className="bg-white pt-6 pb-2">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-3 flex items-center justify-between">
+          <div />
+          <Link
+            href="/promo"
+            className="flex items-center gap-0.5 text-sm font-medium text-primary hover:underline"
           >
-            {/* Decorative circles */}
-            <div className="pointer-events-none absolute -right-10 -top-10 size-40 rounded-full bg-white/10" />
-            <div className="pointer-events-none absolute -right-4 bottom-0 size-28 rounded-full bg-white/10" />
-            <div className="pointer-events-none absolute right-16 -bottom-6 size-16 rounded-full bg-white/10" />
+            Lihat Semua
+            <ChevronRight className="size-4" />
+          </Link>
+        </div>
 
-            {/* Emoji */}
-            <span
-              className="absolute right-8 top-1/2 -translate-y-1/2 text-6xl opacity-30 select-none pointer-events-none"
-              aria-hidden
-            >
-              {banner.emoji}
-            </span>
-
-            <span
-              className={cn(
-                "mb-2 inline-block self-start rounded-full px-2.5 py-0.5 text-xs font-semibold",
-                banner.badgeClass
-              )}
-            >
-              {banner.badge}
-            </span>
-            <h2 className="text-xl font-extrabold text-white leading-tight drop-shadow-sm">
-              {banner.title}
-            </h2>
-            <p className="mt-1 text-sm text-white/80">{banner.subtitle}</p>
+        <div
+          className="relative overflow-hidden rounded-xl select-none"
+          onPointerDown={handlePointerDown}
+          onPointerUp={handlePointerUp}
+        >
+          {/* Slides */}
+          <div
+            className="flex transition-transform duration-500 ease-out"
+            style={{ transform: `translateX(-${current * 100}%)` }}
+          >
+            {banners.map((banner) => (
+              <div
+                key={banner.id}
+                className="relative w-full shrink-0"
+                style={{ minWidth: "100%" }}
+              >
+                <Image
+                  src={banner.image}
+                  alt={banner.alt}
+                  width={1200}
+                  height={260}
+                  unoptimized
+                  className="aspect-[4.5/1] w-full rounded-xl object-cover"
+                  priority={banner.id === 1}
+                />
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
 
-      {/* Dot indicators */}
-      <div className="absolute bottom-2.5 left-1/2 flex -translate-x-1/2 items-center gap-1.5">
-        {banners.map((_, i) => (
+          {/* Previous / Next */}
           <button
-            key={i}
             type="button"
-            onClick={() => setCurrent(i)}
-            className={cn(
-              "h-1.5 rounded-full transition-all duration-300",
-              i === current ? "w-5 bg-white" : "w-1.5 bg-white/50"
-            )}
-            aria-label={`Banner ${i + 1}`}
-          />
-        ))}
+            onClick={goPrev}
+            className="absolute left-3 top-1/2 flex size-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-gray-700 shadow-md hover:bg-white"
+            aria-label="Banner sebelumnya"
+          >
+            <ChevronRight className="size-4 rotate-180" />
+          </button>
+          <button
+            type="button"
+            onClick={goNext}
+            className="absolute right-3 top-1/2 flex size-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-gray-700 shadow-md hover:bg-white"
+            aria-label="Banner berikutnya"
+          >
+            <ChevronRight className="size-4" />
+          </button>
+
+          {/* Dot indicators */}
+          <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-1.5">
+            {banners.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => goTo(i)}
+                className={cn(
+                  "h-2 rounded-full transition-all duration-300",
+                  i === current
+                    ? "w-5 bg-primary"
+                    : "w-2 bg-white/60 hover:bg-white"
+                )}
+                aria-label={`Banner ${i + 1}`}
+              />
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

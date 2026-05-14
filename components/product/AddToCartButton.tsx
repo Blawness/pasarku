@@ -10,9 +10,10 @@ import { cn } from "@/lib/utils";
 interface AddToCartButtonProps {
   productId: string;
   stock: number;
-  /** Renders as a small green circle icon-only button (for product cards) */
+  /** Renders as a small circle icon-only button (for product cards) */
   iconOnly?: boolean;
   className?: string;
+  label?: string;
 }
 
 export function AddToCartButton({
@@ -20,6 +21,7 @@ export function AddToCartButton({
   stock,
   iconOnly,
   className,
+  label = "Tambah",
 }: AddToCartButtonProps) {
   const openDrawer = useCartDrawer((s) => s.open);
   const setAdding = useAddToCart((s) => s.setAdding);
@@ -88,7 +90,7 @@ export function AddToCartButton({
       ) : (
         <Plus className="h-4 w-4" />
       )}
-      Tambah
+      {label}
     </Button>
   );
 }

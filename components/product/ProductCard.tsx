@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { formatRupiah } from "@/lib/utils";
 import { AddToCartButton } from "./AddToCartButton";
+import { Badge } from "@/components/ui/badge";
 
 interface ProductCardProps {
   product: {
@@ -20,7 +21,7 @@ export function ProductCard({ product }: ProductCardProps) {
   const outOfStock = product.stock === 0;
 
   return (
-    <div className="group relative overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm transition-shadow hover:shadow-md">
+    <div className="group flex flex-col overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm transition-shadow hover:shadow-md">
       {/* Image */}
       <Link href={`/products/${product.slug}`} className="block">
         <div className="relative aspect-square overflow-hidden bg-gray-50">
@@ -30,7 +31,7 @@ export function ProductCard({ product }: ProductCardProps) {
             fill
             unoptimized
             className="object-cover transition-transform duration-300 group-hover:scale-105"
-            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
           />
           {outOfStock && (
             <div className="absolute inset-0 flex items-center justify-center bg-black/50">
@@ -43,31 +44,35 @@ export function ProductCard({ product }: ProductCardProps) {
       </Link>
 
       {/* Info */}
-      <div className="p-2.5">
+      <div className="flex flex-1 flex-col p-3">
         <Link href={`/products/${product.slug}`}>
-          <h3 className="line-clamp-2 text-sm font-bold leading-snug text-gray-900 hover:text-primary transition-colors">
+          <h3 className="line-clamp-2 text-sm font-medium leading-snug text-gray-800 hover:text-primary transition-colors">
             {product.name}
           </h3>
         </Link>
-        <Link
-          href={`/merchants/${product.merchantId}`}
-          className="mt-0.5 block truncate text-[11px] text-gray-400 hover:text-gray-600 transition-colors"
-        >
-          {product.storeName}
-        </Link>
 
-        <div className="mt-2 flex items-end justify-between gap-1">
+        <div className="mt-2 flex items-center gap-1.5">
+          <Badge variant="secondary" className="bg-orange-50 text-orange-700 text-[10px] font-medium hover:bg-orange-50">
+            Pengiriman Instan
+          </Badge>
+        </div>
+
+        <div className="mt-auto pt-2">
           <p className="text-sm font-bold text-primary leading-tight">
             {formatRupiah(product.price)}
           </p>
-          {!outOfStock && (
+        </div>
+
+        {!outOfStock && (
+          <div className="mt-2">
             <AddToCartButton
               productId={product.id}
               stock={product.stock}
-              iconOnly
+              label="Beli"
+              className="w-full rounded-lg bg-primary text-white hover:bg-primary/90"
             />
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );

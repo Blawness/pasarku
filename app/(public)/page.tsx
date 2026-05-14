@@ -11,6 +11,8 @@ import { ProductGrid } from "@/components/product/ProductGrid";
 import { SearchBar } from "@/components/product/SearchBar";
 import { HeroBanner } from "@/components/layout/HeroBanner";
 import { EmptyState } from "@/components/shared/EmptyState";
+import { ValueProposition } from "@/components/shared/ValueProposition";
+import { AppDownloadBanner } from "@/components/shared/AppDownloadBanner";
 import { Search } from "lucide-react";
 
 interface HomePageProps {
@@ -60,7 +62,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
   return (
     <div className="flex flex-col">
       {/* Mobile search header */}
-      <div className="bg-gradient-to-b from-green-50 to-white px-4 pt-3 pb-3 sm:hidden">
+      <div className="bg-white px-4 pt-3 pb-3 sm:hidden">
         <SearchBar
           className="w-full"
           placeholder="Cari beragam kebutuhan harian"
@@ -71,29 +73,37 @@ export default async function HomePage({ searchParams }: HomePageProps) {
       <HeroBanner />
 
       {/* Categories */}
-      <section className="pt-4 pb-2">
-        <div className="mb-2.5 flex items-center justify-between px-4">
+      <section className="bg-white pt-5 pb-3">
+        <div className="mb-3 flex items-center justify-between px-4 sm:px-6 lg:px-8">
           <h2 className="text-sm font-bold text-gray-800">Kategori</h2>
         </div>
         <CategoryNav />
       </section>
 
       {/* Products */}
-      <section className="px-4 pt-2 pb-6">
-        <h2 className="mb-3 text-sm font-bold text-gray-800">
-          {q ? `Hasil pencarian "${q}"` : "Produk Pilihan"}
-        </h2>
+      <section className="bg-white px-4 pt-3 pb-6 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="mb-3 text-sm font-bold text-gray-800">
+            {q ? `Hasil pencarian "${q}"` : "Produk Pilihan"}
+          </h2>
 
-        {q && filteredProducts.length === 0 ? (
-          <EmptyState
-            icon={Search}
-            title="Produk tidak ditemukan"
-            description="Coba cari dengan kata kunci yang berbeda."
-          />
-        ) : (
-          <ProductGrid products={filteredProducts} />
-        )}
+          {q && filteredProducts.length === 0 ? (
+            <EmptyState
+              icon={Search}
+              title="Produk tidak ditemukan"
+              description="Coba cari dengan kata kunci yang berbeda."
+            />
+          ) : (
+            <ProductGrid products={filteredProducts} />
+          )}
+        </div>
       </section>
+
+      {/* Value Proposition */}
+      <ValueProposition />
+
+      {/* App Download Banner */}
+      <AppDownloadBanner />
     </div>
   );
 }

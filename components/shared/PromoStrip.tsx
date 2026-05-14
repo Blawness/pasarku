@@ -10,7 +10,7 @@ export function PromoStrip() {
 
   return (
     <div className="fixed bottom-16 left-0 right-0 z-30 sm:hidden">
-      <div className="flex items-center gap-2.5 bg-[#1B5E35] px-3 py-2.5">
+      <div className="flex items-center gap-2.5 bg-primary px-3 py-2.5">
         <div className="flex size-8 shrink-0 items-center justify-center rounded-full border-2 border-yellow-400">
           <Percent className="size-4 text-yellow-400" />
         </div>

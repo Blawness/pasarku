@@ -8,6 +8,7 @@ import {
   ShoppingBag,
   Store,
   Tags,
+  Boxes,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { UserRole } from "@/types";
@@ -30,6 +31,7 @@ const merchantLinks: NavItem[] = [
 
 const adminLinks: NavItem[] = [
   { href: "/admin", label: "Dashboard", icon: <LayoutDashboard className="size-4" /> },
+  { href: "/admin/products", label: "Produk", icon: <Boxes className="size-4" /> },
   { href: "/admin/merchants", label: "Merchant", icon: <Store className="size-4" /> },
   { href: "/admin/categories", label: "Kategori", icon: <Tags className="size-4" /> },
   { href: "/admin/orders", label: "Pesanan", icon: <ShoppingBag className="size-4" /> },
